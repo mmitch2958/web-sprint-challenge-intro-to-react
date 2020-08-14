@@ -1,13 +1,26 @@
 import React from 'react';
+import Character from './components/Character'
 import './App.css';
+import axios from 'axios'
+
 
 const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+ 
+  const[characters,setCharacter] = useState([])
+  const[idRandomizer,setIdRandomizer] = useState([1,2,3,4])
+  const rickAndMortyApiBaseUrl = 'https://rickandmortyapi.com/api/character/'
 
-  // Fetch characters from the API in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  useEffect(() => {
+    axios
+      .get(`${rickAndMortyApiBaseUrl}/${idRandomizer}`)
+      .then(res => {
+        setCharacter(res.data)
+       
+      })
+      .catch(err => {
+        console.log('Oh no you have encountered an ', err)
+      })
+  }, [idRandomizer]);
 
   return (
     <div className="App">

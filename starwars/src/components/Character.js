@@ -8,33 +8,32 @@ import Image from './Image'
 
 
 const CharacterStyled = styled.div`
-   
-    display: flex;
-    justify-content: space-between;
-    width:40%;
+    display: flex;    
+    width: 40%;
     height: 35vh;
-    border: 2px solid red;
- 
+    border: 2px solid Black;
     
     
-    .box{
+    justify-content: center;
+    background: white;
+    
+    
+    .flexContainer{
+        display:flex;
         align-items:center;
         justify-content:center;
-        display:flex;
-        
         
     }
     button{
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
         background-color: grey;
         border-radius: 100%;
         border: 2px solid black;
         color: yellow;
         padding: 15px 32px;
         text-align: center;
-        
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
     }
 `
 
@@ -44,7 +43,7 @@ export default function Character (props){
 
     return (
         <CharacterStyled>
-            <div className="box">
+            <div className="flexContainer">
                 <Image image={character.image} alt={character.species}/>                
                 <div>
                     <Text character={character}/>

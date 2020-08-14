@@ -12,6 +12,7 @@ const CharacterStyled = styled.div`
     width: 40%;
     height: 35vh;
     border: 2px solid Black;
+    flex-direction: column;
     
     
     justify-content: center;

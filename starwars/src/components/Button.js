@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 function randomArrayGenerator(){
     const array = []
-    for(let i=0; i<4; i++){
+    for(let i=0; i<7; i++){
         array.push(Math.floor(Math.random()*590))        
     }
     return array;    

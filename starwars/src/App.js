@@ -7,7 +7,7 @@ import axios from 'axios';
 const App = () => {
 
   const[characters,setCharacter] = useState([])
-  const[idRandomizer,setIdRandomizer] = useState([1,2,3,4])
+  const[idRandomizer,setIdRandomizer] = useState([1,2,3,4,5,6,7])
   const rmApiUrl = 'https://rickandmortyapi.com/api/character/'
 
   useEffect(() => {
